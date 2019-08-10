@@ -1,6 +1,21 @@
-type Money = number
+import request from 'supertest'
+import server from '../server/server'
 
-test('test for test', () => {
-  const x: Money = 1
-  expect(x).toBe(1)
+const app = request(server)
+
+describe('Server', () => {
+  afterAll(() => {
+    server.close()
+  })
+
+  it('can accepts responses', () => {
+    return app.get('/')
+      .expect(200)
+  })
+
+  it('does not accept invalid responses', () => {
+    return app.get('/not/a/real/path')
+      .expect(404)
+  })
+
 })

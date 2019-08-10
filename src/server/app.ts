@@ -11,7 +11,7 @@ app.use(async (ctx, next) => {
   next()
 })
 
-router.get('/*', async (ctx) => {
+router.get('/', async (ctx) => {
   ctx.body = 'Hello World!'
 })
 

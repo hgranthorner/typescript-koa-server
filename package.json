@@ -5,7 +5,8 @@
   "author": "Grant Horner <h.grant.horner@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build-server": "yarn tsc --watch & nodemon js/src/server/server.js"
+    "build-server": "yarn tsc --watch",
+    "run-server": "yarn build-server & nodemon js/src/server/server.js"
   },
   "dependencies": {
     "koa": "^2.7.0",
