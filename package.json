@@ -1,0 +1,11 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Grant Horner <h.grant.horner@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
